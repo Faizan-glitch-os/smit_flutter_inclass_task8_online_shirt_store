@@ -133,9 +133,8 @@ class Checkout extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        boxShadow: [
-          const BoxShadow(
-              color: Colors.black12, blurRadius: 2, spreadRadius: 5),
+        boxShadow: const [
+          BoxShadow(color: Colors.black12, blurRadius: 2, spreadRadius: 5),
         ],
         shape: BoxShape.circle,
         border: Border.all(color: Colors.black12, width: 1),
