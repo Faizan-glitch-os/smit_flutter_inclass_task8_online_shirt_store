@@ -75,7 +75,7 @@ class MainScreen extends StatelessWidget {
       body: GridView.builder(
         itemCount: 8,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, crossAxisSpacing: 10, childAspectRatio: 1 / 1.5),
+            crossAxisCount: 2, crossAxisSpacing: 10, childAspectRatio: 1 / 1.6),
         itemBuilder: (context, index) {
           return Column(
             children: [
