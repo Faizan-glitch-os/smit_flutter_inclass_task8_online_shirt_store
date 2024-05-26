@@ -86,59 +86,14 @@ class Checkout extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  boxShadow: [const BoxShadow(color: Colors.black12)],
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.black12, width: 1),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('32'),
-                ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  boxShadow: [const BoxShadow(color: Colors.black12)],
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.black12, width: 1),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('32'),
-                ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  boxShadow: [const BoxShadow(color: Colors.black12)],
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.black12, width: 1),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('32'),
-                ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  boxShadow: [const BoxShadow(color: Colors.black12)],
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.black12, width: 1),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Text('32'),
-                ),
-              ),
+              CircularButtons(),
+              const SizedBox(width: 10),
+              CircularButtons(),
+              const SizedBox(width: 10),
+              CircularButtons(),
+              const SizedBox(width: 10),
+              CircularButtons(),
+              const SizedBox(width: 10),
             ],
           ),
           InkWell(
@@ -170,6 +125,24 @@ class Checkout extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Container CircularButtons() {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          const BoxShadow(
+              color: Colors.black12, blurRadius: 2, spreadRadius: 5),
+        ],
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.black12, width: 1),
+      ),
+      child: const Padding(
+        padding: EdgeInsets.all(15),
+        child: Text('32'),
       ),
     );
   }
