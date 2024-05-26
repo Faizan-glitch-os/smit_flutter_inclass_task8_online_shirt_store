@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:smit_flutter_inclass_task8_online_shirt_store/checkout.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
 
-  List<String> tShirts = [
+  List<String> tShirtsImages = [
     't4.png',
     't5.png',
     't6.png',
@@ -108,7 +109,7 @@ class MainScreen extends StatelessWidget {
                           children: [
                             Expanded(
                               child: Image.asset(
-                                'assets/images/${tShirts[index]}',
+                                'assets/images/${tShirtsImages[index]}',
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -136,7 +137,17 @@ class MainScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Checkout(
+                        title: tShirtNames[index],
+                        // tShirtsImages: tShirtsImages[index],
+                      ),
+                    ),
+                  );
+                },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
