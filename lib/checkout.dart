@@ -84,17 +84,17 @@ class Checkout extends StatelessWidget {
               ),
             ),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircularSizeButton(),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               CircularSizeButton(),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               CircularSizeButton(),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               CircularSizeButton(),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
             ],
           ),
           InkWell(
