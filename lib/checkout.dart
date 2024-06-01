@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smit_flutter_inclass_task8_online_shirt_store/CircularSizeButton.dart';
 import 'package:smit_flutter_inclass_task8_online_shirt_store/ordered.dart';
 
 class Checkout extends StatelessWidget {
@@ -86,13 +87,13 @@ class Checkout extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircularButtons(),
+              Circularsizebutton(),
               const SizedBox(width: 10),
-              CircularButtons(),
+              Circularsizebutton(),
               const SizedBox(width: 10),
-              CircularButtons(),
+              Circularsizebutton(),
               const SizedBox(width: 10),
-              CircularButtons(),
+              Circularsizebutton(),
               const SizedBox(width: 10),
             ],
           ),
@@ -125,23 +126,6 @@ class Checkout extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Container CircularButtons() {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: const [
-          BoxShadow(color: Colors.black12, blurRadius: 2, spreadRadius: 5),
-        ],
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.black12, width: 1),
-      ),
-      child: const Padding(
-        padding: EdgeInsets.all(15),
-        child: Text('32'),
       ),
     );
   }

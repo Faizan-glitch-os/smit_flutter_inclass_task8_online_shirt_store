@@ -4,6 +4,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:smit_flutter_inclass_task8_online_shirt_store/checkout.dart';
+import 'package:smit_flutter_inclass_task8_online_shirt_store/favorite_button.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
@@ -93,14 +94,7 @@ class MainScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: const BoxDecoration(
-                              color: Colors.black12,
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Icon(Icons.favorite_border_rounded),
-                          ),
+                          FavoriteButton(),
                         ],
                       ),
                       Expanded(
