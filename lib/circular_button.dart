@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CircularSizeButton extends StatefulWidget {
-  const CircularSizeButton({super.key});
+class CircularButton extends StatefulWidget {
+  const CircularButton({super.key});
 
   @override
-  State<CircularSizeButton> createState() => _CircularSizeButtonState();
+  State<CircularButton> createState() => _CircularButtonState();
 }
 
-class _CircularSizeButtonState extends State<CircularSizeButton> {
+class _CircularButtonState extends State<CircularButton> {
   bool onTapSize = false;
 
   @override

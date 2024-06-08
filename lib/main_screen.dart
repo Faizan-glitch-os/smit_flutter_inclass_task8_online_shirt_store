@@ -1,15 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:smit_flutter_inclass_task8_online_shirt_store/checkout.dart';
 import 'package:smit_flutter_inclass_task8_online_shirt_store/favorite_button.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
 
-  List<String> tShirtsImages = [
+  final List<String> tShirtsImages = [
     't4.png',
     't5.png',
     't6.png',
@@ -20,7 +16,7 @@ class MainScreen extends StatelessWidget {
     't11.png'
   ];
 
-  List<String> prices = [
+  final List<String> prices = [
     '245',
     '175',
     '155',
@@ -31,7 +27,7 @@ class MainScreen extends StatelessWidget {
     '310',
   ];
 
-  List<String> tShirtNames = [
+  final List<String> tShirtNames = [
     'T-shirt Armani',
     'T-shirt Amazon',
     'T-shirt Sneakers',
@@ -91,7 +87,7 @@ class MainScreen extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           FavoriteButton(),
@@ -108,7 +104,7 @@ class MainScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '${tShirtNames[index]}',
+                              tShirtNames[index],
                               style:
                                   const TextStyle(fontWeight: FontWeight.bold),
                             ),
