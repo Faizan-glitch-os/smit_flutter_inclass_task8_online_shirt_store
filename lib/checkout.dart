@@ -10,6 +10,9 @@ class Checkout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -63,13 +66,15 @@ class Checkout extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Image.asset('assets/images/$tShirtsImages'),
+                Image.asset(
+                  'assets/images/$tShirtsImages',
+                ),
               ],
             ),
           ),
           Container(
-            width: 100,
-            height: 30,
+            width: screenWidth * .5,
+            height: screenHeight * .04,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
