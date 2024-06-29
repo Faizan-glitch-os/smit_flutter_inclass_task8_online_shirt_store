@@ -28,8 +28,9 @@ class ReviewScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                  text: 'Mr. Puss in Boots',
-                  style: TextStyle(color: Colors.blue, fontSize: 20)),
+                text: 'Mr. Puss in Boots',
+                style: TextStyle(color: Colors.blue, fontSize: 20),
+              ),
             ),
             AnimatedRatingStars(
                 onChanged: (double ratings) => print(ratings),
