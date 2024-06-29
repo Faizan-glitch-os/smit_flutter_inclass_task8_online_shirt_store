@@ -40,6 +40,7 @@ class ReviewScreen extends StatelessWidget {
             TextField(
               maxLines: 5,
               keyboardType: TextInputType.text,
+              autocorrect: true,
             )
           ],
         ),
