@@ -22,7 +22,10 @@ class ReviewScreen extends StatelessWidget {
                 'assets/images/R.png',
               ),
             ),
-            Text('How are you satisfied from', style: TextStyle(fontSize: 30)),
+            Text(
+              'How are you satisfied from',
+              style: TextStyle(fontSize: 30),
+            ),
             RichText(
               text: TextSpan(
                   text: 'Mr. Puss in Boots',
