@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:animated_rating_stars/animated_rating_stars.dart';
 
 class ReviewScreen extends StatelessWidget {
-  const ReviewScreen({super.key});
+  ReviewScreen({super.key});
+
+  TextEditingController reviewController = TextEditingController();
+  String review = '';
 
   @override
   Widget build(BuildContext context) {
@@ -51,12 +54,12 @@ class ReviewScreen extends StatelessWidget {
                 starSize: 50,
                 filledColor: Colors.orange,
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               Container(
                 padding: const EdgeInsets.all(10),
-                child: const Column(
+                child: Column(
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Text('Write a comment'),
                         Spacer(),
@@ -64,22 +67,23 @@ class ReviewScreen extends StatelessWidget {
                       ],
                     ),
                     TextField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           fillColor: Colors.white,
                           border: OutlineInputBorder()),
                       maxLines: 5,
                       keyboardType: TextInputType.text,
                       autocorrect: true,
+                      // controller: reviewController,
+                      onChanged: (value) {
+                        review = value;
+                      },
                     ),
                   ],
                 ),
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ReviewScreen()));
+                  print('This is submitted review $review');
                 },
                 splashColor: Colors.red,
                 child: Container(
@@ -92,7 +96,7 @@ class ReviewScreen extends StatelessWidget {
                   ),
                   child: const Center(
                     child: Text(
-                      'Confirm',
+                      'Submit review',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
